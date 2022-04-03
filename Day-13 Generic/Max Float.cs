@@ -14,7 +14,7 @@ namespace Day_13_Generic
                     first.CompareTo(second) >= 0 && first.CompareTo(third) > 0 ||
                     first.CompareTo(second) > 0 && first.CompareTo(third) >= 0)
             {
-                Console.WriteLine("First Float value is maximum" + first);
+                Console.WriteLine("First Float value is maximum : " + first);
                 return first;
             }
 
@@ -22,14 +22,14 @@ namespace Day_13_Generic
                     second.CompareTo(first) >= 0 && second.CompareTo(third) > 0 ||
                     second.CompareTo(first) > 0 && second.CompareTo(third) >= 0)
             {
-                Console.WriteLine("Second Float value is Maximum " + second);
+                Console.WriteLine("Second Float value is Maximum : " + second);
                 return second;
             }
             if (third.CompareTo(second) > 0 && third.CompareTo(first) > 0 ||
                     third.CompareTo(second) >= 0 && third.CompareTo(first) > 0 ||
                     third.CompareTo(second) > 0 && third.CompareTo(first) >= 0)
             {
-                Console.WriteLine("Third Float value is maximum" + third);
+                Console.WriteLine("Third Float value is maximum : " + third);
                 return third;
             }
             if (first.CompareTo(second) == 0 && first.CompareTo(third) == 0 && second.CompareTo(third) == 0)

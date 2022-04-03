@@ -35,6 +35,17 @@ namespace Day_13_Generic
                     double t = double.Parse(Console.ReadLine());
                     MaxFloat.Float(f, s, t);
                     break;
+                case 3:
+                    Console.WriteLine("Welcome to Greater between 3 Strings program ");
+                    Console.WriteLine("Enter 3 String");
+                    string a = Console.ReadLine();
+                    string b = Console.ReadLine();
+                    string c = Console.ReadLine();
+                    MaxString.String(a,b,c);
+                    break;
+                default:
+                    Console.WriteLine("Please Enter a valid number");
+                    break;
                 
             }
             
