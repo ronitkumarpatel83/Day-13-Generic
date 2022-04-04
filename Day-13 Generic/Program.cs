@@ -14,7 +14,8 @@ namespace Day_13_Generic
             Console.WriteLine("<<<<<<<<<<<<<Generic>>>>>>>>>>>>>>>");
             Console.WriteLine();
             Console.WriteLine("1.Find maximum of three Integer number\n2.Find maximum of three Float number");
-            Console.WriteLine("3.Find maximum of string");
+            Console.WriteLine("3.Find maximum of string\n4.Refactor 1");
+            // Console.WriteLine("5.Refactor 2\n6.Max Method \n7.Max Using Generic");
             Console.WriteLine("Enter your choice : ");
             int ch = Convert.ToInt32(Console.ReadLine());   // Storing user's choice
             switch (ch)
@@ -42,6 +43,21 @@ namespace Day_13_Generic
                     string b = Console.ReadLine();
                     string c = Console.ReadLine();
                     MaxString.String(a,b,c);
+                    break;
+                case 4:
+                    Console.WriteLine("Welcome to program ");
+
+                    Refactor1<int> refactorint = new Refactor1<int>();
+                    int max1 = refactorint.MaxValue(10, 20, 30);
+                    Console.WriteLine("Maximum value of int is : " + max1);
+
+                    Refactor1<double> refactorfloat = new Refactor1<double>();
+                    double max2 = refactorfloat.MaxValue(10.10, 20.20, 30.30);
+                    Console.WriteLine("Maximum value of float is : " + max2);
+
+                    Refactor1<string> refactorstring = new Refactor1<string>();
+                    string max3 = refactorstring.MaxValue("Ronit", "Kumar", "Patel");
+                    Console.WriteLine("Maximum value of string is : " + max3);
                     break;
                 default:
                     Console.WriteLine("Please Enter a valid number");
