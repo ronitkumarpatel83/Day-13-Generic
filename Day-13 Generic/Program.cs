@@ -15,7 +15,7 @@ namespace Day_13_Generic
             Console.WriteLine();
             Console.WriteLine("1.Find maximum of three Integer number\n2.Find maximum of three Float number");
             Console.WriteLine("3.Find maximum of string\n4.Refactor 1\n5.Refactor 2");
-            Console.WriteLine("6.Max Method ");
+            Console.WriteLine("6.Max Method \n7.Max Using Generic");
             Console.WriteLine("Enter your choice : ");
             int ch = Convert.ToInt32(Console.ReadLine());   // Storing user's choice
             switch (ch)
@@ -84,6 +84,19 @@ namespace Day_13_Generic
                     }
 
                     MaxMethod.Max(arr);
+                    break;
+                case 7:
+                    Console.WriteLine("Enter Length of Array");
+                    int length = int.Parse(Console.ReadLine());
+                    int[] array = new int[length];
+                    Console.WriteLine("Enter elements of array");
+                    for (int i = 0; i < array.Length; i++)
+                    {
+                        array[i] = int.Parse(Console.ReadLine());
+                    }
+
+                    MaxUsingGeneric<int> gen = new MaxUsingGeneric<int>(array);
+                    gen.PrintMaxValue();
                     break;
                 default:
                     Console.WriteLine("Please Enter a valid number");
